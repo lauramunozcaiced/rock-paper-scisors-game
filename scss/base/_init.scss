@@ -1,0 +1,95 @@
+body{
+    padding: $padding-base*4 0 $padding-base*2;
+    background: rgba(73,84,125,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(73,84,125,1) 0%, rgba(22,31,64,1) 94%, rgba(22,31,64,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(73,84,125,1)), color-stop(94%, rgba(22,31,64,1)), color-stop(100%, rgba(22,31,64,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(73,84,125,1) 0%, rgba(22,31,64,1) 94%, rgba(22,31,64,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(73,84,125,1) 0%, rgba(22,31,64,1) 94%, rgba(22,31,64,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(73,84,125,1) 0%, rgba(22,31,64,1) 94%, rgba(22,31,64,1) 100%);
+background: radial-gradient(ellipse at center, rgba(73,84,125,1) 0%, rgba(22,31,64,1) 94%, rgba(22,31,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49547d', endColorstr='#161f40', GradientType=1 );
+    height: 100vh;
+    width: 100vw;
+    overflow: none;
+    h1, h2, p, img{
+        font-family: $br;
+        margin: 0;
+    }
+}
+p{
+    display: flex;
+    align-items: center;
+    font-size: $p-size;
+}
+button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none!important;
+    &:hover{
+        border-color: $sign-color!important;
+        color: $sign-color!important;
+        span{
+            color: $sign-color!important;
+        }   
+    }
+}
+a{
+    cursor: pointer;
+}
+
+p, h1, h3, h5, h6{
+    color: $white-color;   
+}
+
+h2{
+    color: $background-color;
+    text-transform: uppercase;
+    font-size: $h2-size;
+    font-weight: 700;
+    letter-spacing: ($letter-spacing-base - 1.5) ;
+}
+span{
+    text-align: center;
+    font-size: $span-size;
+    color: $background-color;
+    font-family: $bb;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-base*2;
+}
+label{
+    color: $label-color;
+    font-family: $bb;
+    font-size: $label-size;
+    line-height: 1;
+    margin: 0;
+   
+}
+h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $h5-size;
+    font-family: $bb;
+    letter-spacing: $letter-spacing-base*2;
+    @include mq('m'){
+        font-size: $h5-size-small;
+    }
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $h3-size;
+    font-family: $bb;
+    letter-spacing: $letter-spacing-base*2;
+    @include mq('m'){
+        font-size: $h3-size-big;
+    }
+}
+
+h6{
+    font-size: $h6-size;
+}
+.fa-heart{
+    animation: heartbeat 1s infinite;  
+}

@@ -1,0 +1,209 @@
+.body{
+    height: 60vh;
+    .row, .col-12, .step, .choose{
+        height: 100%;
+    }
+    .step{
+        align-items: center;
+    }
+    .win{ 
+        -webkit-box-shadow: 0px 0px 78px 5px rgba(181,181,181,1);
+        -moz-box-shadow: 0px 0px 78px 5px rgba(181,181,181,1);
+        box-shadow: 0px 0px 78px 5px rgba(181,181,181,1);
+
+    }
+    .choose{
+        @include mq('m'){
+            zoom: .8;
+        } 
+    }
+    .game{
+        
+        height: 100%;
+        &__container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            &-thehouse, &-you{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: $padding-base*2;
+                @include mq('m'){
+                    height: 50%;
+                    flex-direction: column-reverse;
+                }
+            }
+            &-result{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: $padding-base*2;
+                button{
+                    background-color: $button-color;
+                    border: none;
+                    border-radius: $border-radius-base;
+                    padding: $padding-base $padding-base*2;
+                }
+                @include mq('m'){
+                    height: 50%;
+                    position: absolute;
+                     top: 40%;
+                     width: 100%;
+                }
+               
+
+            }
+        }
+        &__buttons{
+            button{
+                @include mq('st'){
+                    zoom: .7;
+                }
+                @include mq('m'){
+                    zoom: .5;
+                }
+                padding: $padding-base*3!important; 
+                img{
+                    padding: $padding-base*4!important;
+                    width: 170px!important;
+                    height: 170px!important;
+                }
+            }
+        }
+        .inverse{
+            display: flex;
+        }
+    }
+    .choose, .game{
+        position: relative;
+        margin: 0 auto;
+        &.original{
+            width: 320px;
+            height: 300px;
+            button{
+                position: absolute;
+            }
+            .paper{
+                top:0;
+                left: 0;
+            }
+            .scissors{
+                top: 0;
+                right: 0;
+            }
+            .rock{
+                bottom: 0;
+            }
+            .spock,.lizard{
+                visibility: collapse;
+                width: 0;
+                height: 0;
+            }
+        }
+        &.expert{
+            width: 370px;
+            @include mq('m'){
+                height: 360px;
+            }
+            button{
+                position: absolute;
+            }
+            .spock,.lizard{
+                visibility: visible;
+                width: auto;
+                height: auto;
+            }
+            .scissors{
+                top: 0;
+            }
+            .spock{
+                left: 0;
+                top: 100px;
+            }
+            .paper{
+                right: 0;
+                top: 100px;
+            }
+            .lizard{
+                left: 30px;
+                bottom: 0;
+            }
+            .rock{
+                right: 30px;
+                bottom: 0;
+            }
+            .choose__figure{
+                img{
+                    padding: $spacing-base*3 $spacing-base*2 $spacing-base*2;
+                }
+
+            }
+        }
+        &__buttons{
+            margin: 0 auto;
+            width: 100%;
+            height: 100%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                border-radius: 50%;
+                padding: $padding-base*2; 
+                border: none; 
+                &.scissors{
+                    background: $scissors-color;
+                    background: radial-gradient(circle, $scissors-color 0%, $scissors-color 64%, $scissors-color-gradient 78%);
+                }
+                &.spock{
+                    background: $spock-color;
+                    background: radial-gradient(circle, $spock-color 0%, $spock-color 64%, $spock-color-gradient 78%);
+                }
+                &.paper{
+                    background-color: $paper-color;
+                    background: radial-gradient(circle, $paper-color 0%, $paper-color 64%, $paper-color-gradient 78%);
+                }
+                &.lizard{
+                    background-color: $lizard-color;
+                    background: radial-gradient(circle, $lizard-color 0%, $lizard-color 64%, $lizard-color-gradient 78%);
+                }
+                &.rock{
+                    background-color: $rock-color;
+                    background: radial-gradient(circle, $rock-color 0%, $rock-color 64%, $rock-color-gradient 78%);
+                }
+                        
+                img{
+                    padding: $padding-base*3;
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                    background-color: $button-color;
+                    -webkit-box-shadow: inset 10px 10px 31px -12px rgba(82,82,82,1);
+                    -moz-box-shadow: inset 10px 10px 31px -12px rgba(82,82,82,1);
+                    box-shadow: inset 10px 10px 31px -12px rgba(82,82,82,1);
+                }
+                
+            }
+        }
+        &__figure{
+            padding: $padding-base*2;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                padding: $padding-base*5 ;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

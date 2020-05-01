@@ -1,0 +1,53 @@
+.header{
+    height: 25vh;
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .score{
+            height: calc(25vh - 8vh);
+            display: flex;
+            justify-content: space-between;
+            padding: $padding-base*2;
+            border-radius: $border-radius-base;
+            border: $letter-spacing-base*2 solid $line-container;
+            &__container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                border-radius: $border-radius-base;
+                background-color: $white-color;
+                width: 30%;
+                max-width: 110px;
+                &-title, &-number{
+                    text-align: center;
+                }
+            }
+            &__logo{
+                img{
+                    height: 100%;
+                    max-width: 70%;
+                }
+            }
+        }
+        .modegame__container{
+            height: 8vh;
+            padding: $padding-base 0;
+            display: flex;
+            flex-direction: row-reverse;
+            button{
+                margin: 0 $padding-base;
+                border: $letter-spacing-base solid $white-color;
+                border-radius: $border-radius-base;
+                color: $white-color;
+                font-size: $span-size;
+                font-family: $bb;
+                text-transform: uppercase;
+                letter-spacing: $letter-spacing-base*2;
+                
+            }
+        }
+    }
+    
+}
