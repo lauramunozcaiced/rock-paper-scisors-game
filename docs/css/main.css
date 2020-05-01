@@ -478,19 +478,26 @@ h6 {
   letter-spacing: 2px;
 }
 
-.attribution {
+#attribution {
   width: 60%;
   position: fixed;
   bottom: 0;
   left: 0;
   padding: 2rem;
+  z-index: 0;
+}
+#attribution.no-show {
+  visibility: hidden;
+}
+#attribution.show {
+  visibility: visible;
 }
 @media (max-width: 570px) {
-  .attribution {
+  #attribution {
     padding: 1rem;
   }
 }
-.attribution a, .attribution i {
+#attribution a, #attribution i {
   color: #f7a047;
 }
 

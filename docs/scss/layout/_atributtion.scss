@@ -1,4 +1,10 @@
-.attribution{
+#attribution{
+    &.no-show{
+        visibility: hidden;
+    }
+    &.show{
+        visibility: visible;
+    }
     width: 60%;
     position: fixed;
     bottom: 0;

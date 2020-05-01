@@ -9,9 +9,11 @@ function initialize(){
 
 /* functions to modal rules*/
 function openModalRules(){
+    document.getElementById('attribution').className = 'no-show';
     document.getElementById('rules-modal').style.display='flex';
 }
 function closeModalRules(){
+    document.getElementById('attribution').className = 'show';
     document.getElementById('rules-modal').style.display='none';
 }
 
