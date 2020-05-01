@@ -72,11 +72,11 @@ function changeStepGame(step,item){
 
 /* Get the url images by element */
 function chooseImg(item,mode = detectGameMode()){
-    var options = [ { name: 'rock', url: "../assets/img/icon-rock.svg"},
-                    { name: 'paper', url: "../assets/img/icon-paper.svg"},
-                    { name: 'scissors', url: "../assets/img/icon-scissors.svg"},
-                    { name: 'spock', url: "../assets/img/icon-spock.svg"},
-                    { name: 'lizard', url: "../assets/img/icon-lizard.svg"}
+    var options = [ { name: 'rock', url: "./assets/img/icon-rock.svg"},
+                    { name: 'paper', url: "./assets/img/icon-paper.svg"},
+                    { name: 'scissors', url: "./assets/img/icon-scissors.svg"},
+                    { name: 'spock', url: "./assets/img/icon-spock.svg"},
+                    { name: 'lizard', url: "./assets/img/icon-lizard.svg"}
                 ];
          if(item != undefined || item != null){
             for(var i= 0; i < options.length; i++){
