@@ -93,7 +93,6 @@ function chooseImg(item,mode = detectGameMode()){
              }  else{
                 a = Math.floor((Math.random() * 3));
              }
-             console.log(a);
              return options[a];
          } 
 }
@@ -151,7 +150,7 @@ function updateScore(state){
 
 /* Detect Game Mode */
 function detectGameMode(){
-    var gameMode = document.getElementById('game-mode').innerText;
+    var gameMode = (document.getElementById('game-mode').innerText).toLowerCase();
     if(gameMode == 'original'){
         return 'expert';
     }
